@@ -7,6 +7,14 @@
     <title>Personal Portfolio Website - Easy Tutorials</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("yPtJqo8Pp28PDoMPq");
+   })();
+</script>
 </head>
 <body>
 <div id="header">
@@ -147,10 +155,10 @@
                 <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <form id="form" name="form" onsubmit="sendMessage()">
+                    <input type="text" name="Name" id="name" placeholder="Your Name" required>
+                    <input type="email" name="Email" id="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" id="message" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
                 <span id="msg"></span>
@@ -158,12 +166,15 @@
         </div>
     </div>
     <div class="copyright">
-        <p>Copyright © Kevin. Made wtih <i class="fas fa-heart"></i> by <a href="https://www.youtube.com/channel/UCkjoHfkLEy7ZT4bA2myJ8xA?sub_confirmation=1">Easy Tutorials</a></p>
+        <p class="copyright text-center">
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+        </p>
     </div>
 </div>
 
 
 
+<script src="index.js"></script>
 <script>
 
     var tablinks = document.getElementsByClassName("tab-links");
@@ -180,9 +191,6 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 
-</script>
-
-<script>
 
     var sidemeu = document.getElementById("sidemenu");
 
@@ -193,24 +201,8 @@
         sidemeu.style.right = "-200px";
     }
 
-</script>
-<script>
-    const scriptURL = '< add you own link here >' // add your own app script link here
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
+
+ 
   </script>
 </body>
 </html>
