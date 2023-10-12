@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website - Easy Tutorials</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
@@ -27,9 +28,9 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-times" onclick="closemenu()"></i>
+                <i class="fa fa-times" aria-hidden="true" onclick="closemenu()"></i>
             </ul>
-            <i class="fas fa-bars" onclick="openmenu()"></i>
+            <i class="fa fa-bars" aria-hidden="true" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>UI/UX Designer</p>
@@ -85,19 +86,19 @@
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
             <div>
-                <i class="fas fa-code"></i>
+                <!-- <i class="fas fa-code"></i> -->
                 <h2>Web Design</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis.</p>
                 <a href="#">Learn more</a>
             </div>
             <div>
-                <i class="fas fa-crop-alt"></i>
+                <!-- <i class="fas fa-crop-alt"></i> -->
                 <h2>UI/UX Design</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis.</p>
                 <a href="#">Learn more</a>
             </div>
             <div>
-                <i class="fab fa-app-store"></i>
+                <!-- <i class="fab fa-app-store"></i> -->
                 <h2>App Design</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis.</p>
                 <a href="#">Learn more</a>
@@ -144,13 +145,14 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fas fa-paper-plane"></i> contact@example.com</p>
-                <p><i class="fas fa-phone-square-alt"></i> 0123456789</p>
+                <p><i class="fa fa-paper-plane" aria-hidden="true"></i> contact@example.com</p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i> 0123456789</p>
                 <div class="social-icons">
-                    <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-twitter-square"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href="https://facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href=""><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                 </div>
                 <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
             </div>
