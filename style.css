@@ -31,7 +31,12 @@ nav{
 }
 
 .logo{
-    width: 140px;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #fff !important;
+}
+.logo-s {
+    color: #ff004f !important;
 }
 
 nav ul li{
