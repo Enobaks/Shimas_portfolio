@@ -342,6 +342,7 @@ nav .fa{
     }
     .header-text h1{
         font-size: 30px;
+        text-shadow: 2px 2px 4px #000;
     }
     nav .fa{
         display: block;
